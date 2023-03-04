@@ -34,7 +34,7 @@ if (connection) {
 		if (err) {
 			console.log("Error", err);
 			return;
-		} else console.log("Questions table created successfully!");
+		} else console.log(result);
 	});
 
 	myQuery = "CREATE TABLE IF NOT EXISTS QUIZ(quiz_id varchar(30) PRIMARY KEY,quiz_description varchar(300),quiz_password varchar(20),user_id varchar(50))";
@@ -42,7 +42,7 @@ if (connection) {
 		if (err) {
 			console.log("Error", err);
 			return;
-		} else console.log("Quiz table created successfully!");
+		} else console.log(result);
 	});
 
 	// // Creating new Course table if doesn't exist
@@ -64,28 +64,3 @@ app.get("/", (req, res) => {
 app.listen(5000, () => {
 	console.log("Started at port no 5000");
 });
-
-
-//postman...
-
-// {
-//     "s_id":"12",
-//     "password":"pass",
-//     "name":"ABC",
-//     "course_id":"12",
-//     "dept_name":"CSE",
-//     "totCred":10
-// }
-
-// {
-//     "course_id":"CS12",
-//     "title":"ADSL",
-//     "credits":10,
-//     "dept_name":"CSE"
-// }
-
-// {
-//     "dept_name":"CSE",
-//     "budget":2022,
-//     "YOE":1995
-// }
