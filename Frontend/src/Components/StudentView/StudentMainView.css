@@ -1,13 +1,10 @@
 .mainContainer {
-  margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: auto;
   text-align: center;
-  padding: 0;
-  border: solid;
-  border-width: 0.5px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 40px;
+  width: 80%;
+  background-color: rgb(89, 0, 255);
+  color: white;
 }
 
 .wd-10{
@@ -16,4 +13,23 @@
 
 .fr {
   float: right;
+}
+
+input{
+  padding: 4px;
+  margin: 4px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+}
+
+div, p{
+  color: white;
+}
+
+.options{
+  background-color: rgb(31, 31, 26);
+  width: 60%;
+  margin: auto;
+  padding: 8px;
 }

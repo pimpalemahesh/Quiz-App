@@ -22,9 +22,12 @@ function Sidebar() {
         <a href="/AllQuizPage" class="w3-bar-item w3-button">
           Select a quiz
         </a>
+        <a href="/" class="w3-bar-item w3-button">
+          Logout
+        </a>
       </div>
 
-      <div class="navbarClass">
+      <div class="navbarClass" style={{ background: "aqua", color:"black" }}>
         <button
           class="w3-button w3-xlarge"
           onClick={() => {

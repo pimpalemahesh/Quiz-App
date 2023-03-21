@@ -10,5 +10,11 @@ h2{
 }
 
 .loginBody {
-  margin: 80px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  background-color: rgb(47, 47, 71);
+  color: white;
+  
 }

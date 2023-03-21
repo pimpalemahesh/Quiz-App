@@ -7,11 +7,6 @@ function Login() {
   return (
     <div
       className="loginBody"
-      style={{
-        textAlign: "center",
-        fontFamily: "verdana",
-        color: "rgb(4, 77, 95)",
-      }}
     >
       <h2>Login</h2>
       <div className="studentLogin">
@@ -20,7 +15,7 @@ function Login() {
             event.preventDefault();
             var email = event.target.email.value;
             var password = event.target.password.value;
-            if(email.length === 0 || password.length === 0){
+            if (email.length === 0 || password.length === 0) {
               alert("Empty Fields");
               return;
             }
@@ -32,7 +27,11 @@ function Login() {
               .then((res) => {
                 console.log("Res", res);
                 // navigate("/StudentView/" + res.data.role);
-                navigate("/AllQuizPage");
+                if (res.data.role === 'Teacher') {
+                  navigate("/teacherHome")
+                } else {
+                  navigate("/AllQuizPage");
+                }
               })
               .catch((err) => {
                 alert("Invalid Credentials");
@@ -43,11 +42,11 @@ function Login() {
 
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@gmail.com" />
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" name="password" className="form-control" id="exampleInputPassword1" />
+            <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Si3xl@29"/>
           </div>
           <button type="submit" className="btn btn-primary bg-secondary">Submit</button>
         </form>

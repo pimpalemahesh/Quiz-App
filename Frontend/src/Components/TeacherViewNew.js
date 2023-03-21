@@ -11,7 +11,6 @@ function TeacherViewNew() {
         answer: "",
         author: "teacher",
         quiz_id: "101"
-
     });
     function handleClick(event) {
         event.preventDefault();
@@ -25,12 +24,26 @@ function TeacherViewNew() {
             })
     }
     return (
-        <div>
-            <h2 className="container text-primary text-center my-3">Add questions to Quiz</h2>
+        <div className="">
+            <h2 className="container text-dark text-center my-3">Add questions to Quiz</h2>
             <div className="TeacherView">
-                <h3 className="text-warning text-center my-2">Enter Question </h3>
+                <br />
+                <br />
+                <input
+                    className="w-50 p-2 teacherInput"
+                    type="number"
+                    placeholder="Quiz Id"
+                    onChange={(event) => {
+                        const temp = { ...finalData };
+                        temp.quiz_id = event.target.value;
+                        setFinalData(temp);
+                    }}
+                />
+                <br />
+                <br/>
                 <textarea
                     className="teacherTextArea"
+                    placeholder="Enter Question"
                     name="" id=""
                     cols="100"
                     rows="2"

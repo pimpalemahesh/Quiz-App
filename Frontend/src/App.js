@@ -13,7 +13,10 @@ import StudentMainView from "./Components/StudentView/StudentMainView";
 function App() {
   return (
     <div className="container">
+      <div style={{marginBottom:"40px"}}>
       <Sidebar />
+      </div>
+      
       <Router>
         <Routes>
           <Route exact path="/" element={<Login/>}></Route>
@@ -24,6 +27,7 @@ function App() {
           <Route exact path="/studentHome" element={<StudentMainView/>}></Route>
           <Route exact path="/teacherHome" element={<TeacherViewNew/>}></Route>
           <Route exact path="/update" element={<TeacherViewUpdate/>}></Route>
+          
         </Routes>
       </Router>
     </div>

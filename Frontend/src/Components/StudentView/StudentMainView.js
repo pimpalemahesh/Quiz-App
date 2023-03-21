@@ -71,6 +71,7 @@ function StudentDisplay() {
         ></input>
         <br />
         <br />
+        <div className="options">
         <input
           className="text-center"
           type="radio"
@@ -133,11 +134,12 @@ function StudentDisplay() {
           disabled={true}
           value={currentQuestion.option4}
         ></input>
+        </div>
         <br />
         <br />
 
         <button
-          className="wd-10 btn btn-warning mx-3"
+          className="wd-10 btn btn-primary mx-3"
           onClick={() => {
             console.log("Pressed prev button");
             if (questionCounter - 1 >= 0) {
@@ -152,7 +154,7 @@ function StudentDisplay() {
           Previous
         </button>
         <button
-          className="wd-10 btn btn-danger"
+          className="wd-10 btn btn-success"
           // type="submit"
           onClick={(event) => {
             event.preventDefault();
@@ -182,9 +184,7 @@ function StudentDisplay() {
         >
           Submit
         </button>
-        <button
-          className="wd-10 btn btn-warning mx-3"
-          onClick={() => {
+        <button className="wd-10 btn btn-primary mx-3" onClick={() => {
             console.log("Pressed next button");
             if (questionCounter + 1 < totalNoOfQuestions) {
               console.log("In if");
@@ -194,15 +194,13 @@ function StudentDisplay() {
               setCurrentQuestion(allQuestionOfQuiz[no]);
             }
           }}
-        >
-          Next
-        </button>
+        > Next    </button>
       </form>
       <h1>{correctCount}</h1>
       {answerSheet.map((e) => {
         return (
           <>
-            <p className="text-dark">
+            <p className="text-white">
               Question : {e.q_id} Answer : {e.answer}
             </p>
           </>
