@@ -22,3 +22,8 @@
   height: 30px;
   border-radius: 7px;
 }
+
+*, div, p, h2, input{
+  color: black;
+}
+

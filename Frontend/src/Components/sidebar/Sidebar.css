@@ -1,8 +1,8 @@
 #mySidebar {
-  background: #ffffff;
+  background: black;
+  color: white;
   grid-area: sidebar;
   overflow-y: auto;
-  padding: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -12,12 +12,8 @@
   justify-content: space-between;
   align-items: center;
   color: #0055ff;
-  margin-bottom: 30px;
-  padding: 20px;
   /* color: #E85B6B; */
 }
-
-
 
 @media only screen and (max-width: 978px) {
   #sidebar {

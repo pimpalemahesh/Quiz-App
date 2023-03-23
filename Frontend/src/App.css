@@ -13,3 +13,17 @@ textarea{
   text-align: center;
   padding: 2px;
 }
+
+body{
+  background-color: black;
+}
+
+.score-card{
+  width: 60%;
+  margin: auto;
+}
+
+.score-card p, .score-card h2{
+  color: white;
+}
+

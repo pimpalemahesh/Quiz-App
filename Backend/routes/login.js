@@ -1,42 +1,36 @@
 const router = require("express").Router();
-const connection = require("../db");
+const con = require("../db");
 
 const databaseName = "Person";
+const bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
 
-router.post("/:userType", (req, res) => {
-  console.log(req.body);
-  try {
-    const user_id = req.body.email,
-      password = req.body.password;
-    connection.query(
-      "select * from " + databaseName + " where email=?",
-      [user_id],
-      (err, result) => {
-        if (err) {
-          console.log(err);
-          res.status(400).send(err.message);
-          return;
+
+router.post('/api/login/', jsonParser, (req, res) => {
+    var user = req.body;
+    console.log(user);
+    var query = "SELECT * FROM person WHERE email = '" + req.body.email + "'";
+    con.query(query, function (err, result, fields) {
+        if (err) throw err;
+        if (result.length === 0) {
+            console.log("Empty");
+            return res.send("Account doesn't exist");
         }
-        console.log("result", result);
-        if (result) {
-          if (result.length == 0)
-            res.status(400).send({ message: "Username does not exists" });
-          else {
-            if ( result[0].password === password.trim()){
-              res.status(200).send({ loggedIn: true, role: result[0].role });
-            }
-            else
-              res
-                .status(400)
-                .send({ message: "Username and password does not match" });
-          }
+        user = result[0];
+        console.log(user);
+        if (result != undefined && result[0].email === req.body.email) {
+
+            var ROLE = result[0].role;
+            console.log("Role : " + ROLE);
+            res.json({
+                user: result[0]
+            })
+        } else {
+            console.log("Wrong password");
+            res.send("Wrong Password");
         }
-      }
-    );
-  } catch (err) {
-    console.log("e", err);
-    res.status(400).send(err.message);
-  }
+    })
+
 });
 
 module.exports = router;

@@ -3,10 +3,19 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  color: white;
+}
+
+body{
+  background-color: white;
 }
 
 h2{
   font-weight: x-large;
+}
+
+h2, input, p, label{
+  color: white;
 }
 
 .loginBody {
@@ -16,5 +25,4 @@ h2{
   width: 60%;
   background-color: rgb(47, 47, 71);
   color: white;
-  
 }

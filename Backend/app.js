@@ -34,7 +34,7 @@ if (connection) {
 		if (err) {
 			console.log("Error", err);
 			return;
-		} else console.log(result);
+		} else;
 	});
 
 	myQuery = "CREATE TABLE IF NOT EXISTS QUIZ(quiz_id varchar(30) PRIMARY KEY,quiz_description varchar(300),quiz_password varchar(20),user_id varchar(50))";
@@ -42,7 +42,7 @@ if (connection) {
 		if (err) {
 			console.log("Error", err);
 			return;
-		} else console.log(result);
+		} else;
 	});
 
 	// // Creating new Course table if doesn't exist

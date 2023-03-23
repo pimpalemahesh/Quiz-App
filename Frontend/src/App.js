@@ -12,8 +12,8 @@ import StudentMainView from "./Components/StudentView/StudentMainView";
 
 function App() {
   return (
-    <div className="container">
-      <div style={{marginBottom:"40px"}}>
+    <div className="card">
+      <div style={{marginBottom:"40px",color:"black"}}>
       <Sidebar />
       </div>
       
@@ -24,7 +24,6 @@ function App() {
           <Route exact path="/Login" element={<Login />}></Route>
           <Route exact path="/AllQuizPage" element={<AllQuizPage />}></Route>
           <Route exact path="/Scorecard" element={<Scorecard />}></Route>
-          <Route exact path="/studentHome" element={<StudentMainView/>}></Route>
           <Route exact path="/teacherHome" element={<TeacherViewNew/>}></Route>
           <Route exact path="/update" element={<TeacherViewUpdate/>}></Route>
           

@@ -32,7 +32,7 @@ function StudentDisplay() {
   }, []);
 
   return (
-    <div className="mainContainer">
+    <div className="card mainContainer">
       <button
         className="btn btn-success w-25 fr mx-2"
         onClick={() =>
@@ -64,7 +64,7 @@ function StudentDisplay() {
         <br />
         <label>Question : </label>
         <input
-          className="w-75"
+          className="w-75 text-white"
           type="text"
           disabled={true}
           value={currentQuestion.description}
@@ -73,7 +73,7 @@ function StudentDisplay() {
         <br />
         <div className="options">
         <input
-          className="text-center"
+          className="text-center text-white"
           type="radio"
           name="options"
           value="1"
@@ -81,7 +81,7 @@ function StudentDisplay() {
         ></input>
         <label> 1) </label>
         <input
-          className="text-center"
+          className="text-center text-white"
           type="text"
           disabled={true}
           value={currentQuestion.option1}
@@ -89,7 +89,7 @@ function StudentDisplay() {
         <br />
         <br />
         <input
-          className="text-center"
+          className="text-center text-white"
           type="radio"
           name="options"
           value="2"
@@ -97,7 +97,7 @@ function StudentDisplay() {
         ></input>
         <label> 2) </label>
         <input
-          className="text-center"
+          className="text-center text-white"
           type="text"
           disabled={true}
           value={currentQuestion.option2}
@@ -105,7 +105,7 @@ function StudentDisplay() {
         <br />
         <br />
         <input
-          className="text-center"
+          className="text-center text-white"
           type="radio"
           name="options"
           value="3"
@@ -113,7 +113,7 @@ function StudentDisplay() {
         ></input>
         <label> 3) </label>
         <input
-          className="text-center"
+          className="text-center text-white"
           type="text"
           disabled={true}
           value={currentQuestion.option3}
@@ -121,7 +121,7 @@ function StudentDisplay() {
         <br />
         <br />
         <input
-          className="text-center"
+          className="text-center text-white"
           type="radio"
           name="options"
           value="4"
@@ -129,7 +129,7 @@ function StudentDisplay() {
         ></input>
         <label> 4) </label>
         <input
-          className="text-center"
+          className="text-center text-white"
           type="text"
           disabled={true}
           value={currentQuestion.option4}

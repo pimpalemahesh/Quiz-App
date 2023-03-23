@@ -19,8 +19,14 @@ function Sidebar() {
         >
           Close &times;
         </button>
+        <a href="/teacherHome" class="w3-bar-item w3-button">
+          Home
+        </a>
         <a href="/AllQuizPage" class="w3-bar-item w3-button">
-          Select a quiz
+          Select Quiz
+        </a>
+        <a href="/update" class="w3-bar-item w3-button">
+          Update Questions
         </a>
         <a href="/" class="w3-bar-item w3-button">
           Logout

@@ -44,6 +44,7 @@ function AllQuizPage() {
 
   return (
     <div
+      className="card"
       style={{ textAlign: "center", fontFamily: "verdana", marginTop: "50px" }}
     >
       <h2>Select Quiz from Below :</h2>
